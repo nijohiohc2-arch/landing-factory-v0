@@ -12,5 +12,10 @@
   <script src="https://cdn.jsdelivr.net/gh/nijohiohc2-arch/landing-factory-v0@070889f6e709ed96751b104e821598bd743280e2/js/engine.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/nijohiohc2-arch/landing-factory-v0@070889f6e709ed96751b104e821598bd743280e2/js/render.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/nijohiohc2-arch/landing-factory-v0@070889f6e709ed96751b104e821598bd743280e2/js/app.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (typeof render === "function") render();
+    });
+  </script>
 </body>
 </html>
