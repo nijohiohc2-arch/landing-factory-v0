@@ -1,0 +1,24 @@
+.lp-preview-bar {
+  position: sticky; top: 0; z-index: 30;
+  display: flex; justify-content: space-between; gap: 12px; align-items: center;
+  padding: 10px 16px; background: #111; color: #eee; font-size: 12px;
+}
+.lp-preview-meta { opacity: .75; }
+.lp-preview-tools { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-left: auto; }
+.lp-preview-tools button,
+.lp-preview-tools a {
+  background: transparent; color: #eee; border: 1px solid #444;
+  border-radius: 999px; padding: 6px 10px; cursor: pointer; font-size: 12px; text-decoration: none;
+}
+.lp-preview-tools button.is-on { background: #f0d9a8; color: #1a1408; border-color: #f0d9a8; }
+body.device-mobile.public-mode { background: #0c0c0c; }
+body.device-mobile .lp {
+  width: min(390px, calc(100% - 24px));
+  margin: 18px auto 48px;
+  min-height: 720px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 0 0 10px #171717, 0 24px 70px rgba(0,0,0,.45);
+}
+body.device-mobile .lp-top { top: 0; }
+@media (max-width: 720px) { .lp-preview-meta { display: none; } }
