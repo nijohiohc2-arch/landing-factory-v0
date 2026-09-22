@@ -1,0 +1,68 @@
+/* First-screen layout for the live app.js shell markup */
+body {
+  font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", sans-serif;
+  color: #16130e;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #fbeec8 0%, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(22,19,14,0.035) 48px),
+    #efe6d4;
+}
+.shell { width: min(1080px, calc(100% - 48px)); margin: 0 auto; padding: 28px 0 96px; }
+.shell.narrow { width: min(720px, calc(100% - 32px)); }
+.topbar {
+  display: flex; align-items: center; gap: 14px;
+  padding: 4px 0 22px; border-bottom: 2px solid #16130e; margin-bottom: 36px;
+}
+.topbar .brand { font-family: Syne, "IBM Plex Sans KR", sans-serif; font-weight: 800; letter-spacing: 0.06em; font-size: 15px; }
+.topbar .brand em { color: #c4452d; font-style: normal; margin-left: 8px; font-size: 12px; }
+.topbar nav { margin-left: auto; display: flex; gap: 8px; }
+.hero-factory { padding: 8px 0 12px; }
+.kicker { color: #c4452d; letter-spacing: 0.18em; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 0 12px; }
+.hero-factory h1 {
+  font-family: Syne, "IBM Plex Sans KR", sans-serif;
+  font-size: clamp(40px, 7vw, 76px);
+  line-height: 0.96; margin: 0 0 18px; letter-spacing: -0.04em;
+}
+.lede { color: #3c352b; max-width: 38rem; line-height: 1.75; font-size: 17px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 0; padding: 14px 22px; cursor: pointer; text-decoration: none; font-weight: 700;
+}
+.btn.primary { background: #16130e; color: #f7f0e2; }
+.btn.ghost, .ghost {
+  background: transparent; border: 1px solid #16130e; color: #16130e;
+  padding: 8px 13px; cursor: pointer; text-decoration: none; font-size: 13px;
+}
+.panel { margin-top: 48px; border: 1px solid #16130e; background: #f7f0e2; }
+.panel-h { display: flex; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid #d4c4a8; }
+.panel-h h2 { margin: 0; font-family: Syne, "IBM Plex Sans KR", sans-serif; font-size: 16px; }
+.proj-list, .lp-list { list-style: none; margin: 0; padding: 0; }
+.proj-list li { display: flex; gap: 12px; align-items: center; padding: 18px 20px; border-top: 1px solid #d4c4a8; }
+.proj-list a { text-decoration: none; color: inherit; display: grid; gap: 4px; }
+.proj-list span, .proj-list em { color: #7a7164; font-style: normal; font-size: 13px; }
+.proj-list em { margin-left: auto; }
+.empty { color: #7a7164; padding: 28px 20px; line-height: 1.7; }
+.card { background: #f7f0e2; border: 1px solid #d4c4a8; padding: 24px; }
+.form-grid { display: grid; gap: 14px; }
+.f { display: grid; gap: 6px; font-size: 12px; color: #7a7164; }
+.f input, .f textarea, .f select {
+  width: 100%; background: #fffdf8; border: 1px solid #d4c4a8; padding: 12px 14px; color: #16130e;
+}
+.form-actions { display: flex; justify-content: space-between; gap: 12px; }
+.meta-line { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.meta-line span { border: 1px solid #d4c4a8; padding: 6px 10px; font-size: 12px; }
+.lp-row {
+  display: grid; grid-template-columns: 48px 1fr auto auto; gap: 12px;
+  background: #f7f0e2; border: 1px solid #d4c4a8; margin: 0 0 10px; padding: 14px;
+}
+.lp-row .idx { font-family: Syne, sans-serif; color: #c4452d; font-size: 20px; }
+.lp-row .acts { display: flex; gap: 6px; flex-wrap: wrap; }
+.lp-row .acts a, .lp-row .acts button {
+  border: 1px solid #d4c4a8; background: transparent; padding: 6px 10px; font-size: 12px; cursor: pointer; text-decoration: none;
+}
+@media (max-width: 720px) {
+  .lp-row { grid-template-columns: 36px 1fr; }
+  .lp-row .tags, .lp-row .acts { grid-column: 1 / -1; }
+}
